@@ -10,6 +10,175 @@
     <title>UniViagens</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+      /* HEADER */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:	#DAA520 ;
+    
+}
+
+
+.initHeader{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.iconHeader{
+    height: 80px;
+    width: 80px;
+}
+.nomeHeader{
+    padding-left: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.textHeader{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    background-color: rgba(240, 248, 255, 0.108);
+    border-radius: 10px ;
+
+}
+
+.textHeader:hover{
+    text-decoration: underline;
+
+}
+
+
+
+main{
+   
+
+}
+.meioPage{
+    
+}
+
+/* MAIN */
+.button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+  
+}
+.labelOne, .labelTwo{
+  font-size: 19px;
+  margin: 5px;
+
+  
+}
+.checkOne{
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance:none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.checkOne:checked {
+    background-color: blue;
+}
+.checkTwo{
+  width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance:none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.checkTwo:checked{
+  background-color: blue;
+}
+/* .buttonMain{
+    background-color: 	#fcfcfc  ;
+    border-radius: 20px;
+    padding: 5px 40px;
+    font-size: 19px;
+    border:2px solid #DAA520;
+
+} */
+
+.pontos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+}
+.address{
+  border: #DAA520 3px solid;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 10px;
+    size: 50px;
+}
+.quantPessoas{
+  display: flex;
+  justify-content: center;
+}
+.pessoas{
+  margin-top: 10px;
+  padding: 30px;
+  border: #DAA520 2px solid;
+}
+.resultado{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.buttonResult{
+  border: #DAA520 2px solid;
+  background-color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.buttonResult:hover{
+  background-color: orange;
+  color: #fff;
+  
+}
+
+    </style>
+
 
 </head>
 <body>
@@ -17,7 +186,7 @@
         <div class="cabecalho">
             <div class="initHeader">
                 <a href=""><img class="iconHeader" src="https://cdn-icons-png.flaticon.com/512/2798/2798088.png" alt="icon UniViagens"></a>
-                <a class="nomeHeader" href="">UniViagens</a>
+                <a class="nomeHeader" href="">UniTrip</a>
             </div>
 
             <div >
@@ -32,24 +201,55 @@
         <form class="meioPage" action="">
 
             <div class="button">
-                <button class="buttonMain">Ida e Voltar</button>
-                <button class="buttonMain">Somente ida</button>
+
+              <label class="labelOne" for="idaVolta">Ida e Volta</label>
+                <input type="checkbox" id="idaVolta" class="checkOne">
+
+                <label class="labelTwo" for="somenteIda">Somente ida</label>
+                <input type="checkbox" id="somenteIda" class="checkTwo">
                 
             </div>
+
+            <div class="pontos">
+              <input class="address" type="text" placeholder="Ponto de partida" >
+              <input class="address" type="text" placeholder="Destino final">
+            </div>
+            
             <div class="data">
                 <input type="date">
                 <br>
                 <input type="date" >
             </div>
 
+            
+            <div class="quantPessoas">
+              <fieldset class="pessoas">
+                <legend style="color: #000; font-size: 20px;">Quantidade de pessoas </legend>
+                
+                <label for="adultos" style="font-size: 18px;">Adultos</label>
+                <input id="adultos" type="number" placeholder="1">
+                <br>
+                <label for="crianças" style="font-size: 18px;">Crianças</label>
+                <input id="crianças" type="number" placeholder="0">
+                <br>
+                <label for="bebês" style="font-size: 18px;">Bebês</label>
+                <input id="bebês" type="number" placeholder="0">
+              </fieldset>
 
-
-
-
+            </div>
+            
         </form>
+
+        
 
        
     </main>
+    <footer>
+      <div class="resultado">
+        <button class="buttonResult">RESULTADO</button>
+      </div>
+      
+    </footer>
     
 </body>
 </html>
