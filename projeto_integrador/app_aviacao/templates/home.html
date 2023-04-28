@@ -1,5 +1,3 @@
-{% load static%}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>UniViagens</title>
+    <title>UniTrip</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
 
     <style>
@@ -101,7 +99,8 @@ main{
     cursor: pointer;
 }
 .checkOne:checked {
-    background-color: blue;
+    background-color:#DAA520;
+    appearance: ;
 }
 .checkTwo{
   width: 1.3em;
@@ -116,7 +115,7 @@ main{
     cursor: pointer;
 }
 .checkTwo:checked{
-  background-color: blue;
+  background-color: #DAA520;
 }
 /* .buttonMain{
     background-color: 	#fcfcfc  ;
@@ -157,6 +156,9 @@ main{
   padding: 30px;
   border: #DAA520 2px solid;
 }
+.quantPessoas label{
+  cursor: pointer;
+}
 .resultado{
   display: flex;
   flex-direction: row;
@@ -168,6 +170,7 @@ main{
   border: #DAA520 2px solid;
   background-color: #fff;
   font-size: 22px;
+  padding: 5px 50px;
   cursor: pointer;
   border-radius: 10px;
 }
@@ -198,12 +201,42 @@ main{
 
     <main>
 
+        <datalist id="locais">
+          <option >Acre/AC</option>
+          <option >Alagoas/AL</option>
+          <option >Amapá/AP</option>
+          <option >Amazonas/AM</option>
+          <option >Bahia/BA</option>
+          <option >Ceará/CE</option>
+          <option >Espírito Santo/ES</option>
+          <option >Goiás/GO</option>
+          <option >Maranhão/MA</option>
+          <option >Mato Grosso/MT</option>
+          <option >Mato Grosso do Sul/MS</option>
+          <option >Minas Gerais/MG</option>
+          <option >Pará/PA</option>
+          <option >Paraíba/PB</option>
+          <option >Paraná/PR</option>
+          <option >Pernambuco/PE</option>
+          <option >Piauí/PI</option>
+          <option >Rio de Janeiro/RJ</option>
+          <option >Rio Grande do Norte/RN</option>
+          <option >Rio Grande do Sul/RS</option>
+          <option >Rondônia/RO</option>
+          <option >Roraima/RR</option>
+          <option >Santa Catarina/SC</option>
+          <option >São Paulo/SP</option>
+          <option >Sergipe/SE</option>
+          <option >Tocantins/TO</option>
+          <option >Distrito Federal/DF</option>
+        </datalist>
+
         <form class="meioPage" action="">
 
             <div class="button">
 
               <label class="labelOne" for="idaVolta">Ida e Volta</label>
-                <input type="checkbox" id="idaVolta" class="checkOne">
+                <input type="checkbox" id="idaVolta"  class="checkOne">
 
                 <label class="labelTwo" for="somenteIda">Somente ida</label>
                 <input type="checkbox" id="somenteIda" class="checkTwo">
@@ -211,8 +244,8 @@ main{
             </div>
 
             <div class="pontos">
-              <input class="address" type="text" placeholder="Ponto de partida" >
-              <input class="address" type="text" placeholder="Destino final">
+              <input class="address" type="text" list="locais" placeholder="Ponto de partida" >
+              <input class="address" type="text" list="locais" placeholder="Destino final">
             </div>
             
             <div class="data">
@@ -227,13 +260,13 @@ main{
                 <legend style="color: #000; font-size: 20px;">Quantidade de pessoas </legend>
                 
                 <label for="adultos" style="font-size: 18px;">Adultos</label>
-                <input id="adultos" type="number" placeholder="1">
+                <input id="adultos" type="number" placeholder="1" min="1" max="9" style="width: 150px;">
                 <br>
                 <label for="crianças" style="font-size: 18px;">Crianças</label>
-                <input id="crianças" type="number" placeholder="0">
+                <input id="crianças" type="number" placeholder="0" min="0" max="9" style="width: 150px;" >
                 <br>
                 <label for="bebês" style="font-size: 18px;">Bebês</label>
-                <input id="bebês" type="number" placeholder="0">
+                <input id="bebês" type="number" placeholder="0" min="0" max="9" style="width: 150px;">
               </fieldset>
 
             </div>
@@ -246,9 +279,9 @@ main{
     </main>
     <footer>
       <div class="resultado">
-        <button class="buttonResult">RESULTADO</button>
+        <button class="buttonResult">BUSCAR</button>
       </div>
-      
+        
     </footer>
     
 </body>
