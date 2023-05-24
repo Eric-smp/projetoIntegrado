@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* HEADER */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.cabecalho{
+display: flex;
+justify-content: space-around;
+align-items: center;
+background-color:	#DAA520 ;
+
+}
+
+
+.initHeader{
+display: flex;
+align-items: center;
+
+
+}
+
+.iconHeader{
+height: 80px;
+width: 80px;
+}
+.nomeHeader{
+padding-left: 20px;
+font-family: 'Lobster', cursive;
+font-size: 25px;
+text-decoration: none;
+color: black;
+}
+
+.textHeader{
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+text-decoration: none;
+color: black;
+padding: 5px;
+background-color: rgba(240, 248, 255, 0.108);
+border-radius: 10px ;
+
+}
+
+.textHeader:hover{
+text-decoration: underline;
+
+}
+
+
+
+
+.meioPage{
+position: relative;
+}
+
+/* MAIN */
+main{
+margin: 50px;
+padding: 50px;
+border:5px solid #DAA520;
+box-shadow: 5px 10px gray;
+}
+.button{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 50px;
+
+}
+.labelOne, .labelTwo{
+font-size: 19px;
+margin: 5px;
+
+
+}
+.checkOne{
+width: 1.3em;
+height: 1.3em;
+background-color: white;
+border-radius: 50%;
+vertical-align: middle;
+border: 1px solid #ddd;
+appearance:none;
+-webkit-appearance: none;
+outline: none;
+cursor: pointer;
+}
+.checkOne:checked {
+background-color:#DAA520;
+
+}
+.checkTwo{
+width: 1.3em;
+height: 1.3em;
+background-color: white;
+border-radius: 50%;
+vertical-align: middle;
+border: 1px solid #ddd;
+appearance:none;
+-webkit-appearance: none;
+outline: none;
+cursor: pointer;
+}
+.checkTwo:checked{
+background-color: #DAA520;
+}
+/* .buttonMain{
+background-color: 	#fcfcfc  ;
+border-radius: 20px;
+padding: 5px 40px;
+font-size: 19px;
+border:2px solid #DAA520;
+
+} */
+
+.pontos{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 10px;
+}
+.address{
+border: #DAA520 3px solid;
+border-radius: 10px;
+padding: 5px;
+
+}
+
+.data{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin-top: 20px;
+font-size: 10px;
+size: 50px;
+}
+.quantPessoas{
+display: flex;
+justify-content: center;
+}
+.pessoas{
+margin-top: 10px;
+padding: 30px;
+border: #DAA520 2px solid;
+}
+.quantPessoas label{
+cursor: pointer;
+}
+.resultado{
+display: flex;
+flex-direction: row;
+justify-content: center;
+margin: 5px;
+}
+
+.buttonResult{
+border: #DAA520 2px solid;
+background-color: #fff;
+font-size: 22px;
+padding: 5px 50px;
+cursor: pointer;
+border-radius: 10px;
+}
+.buttonResult:hover{
+background-color: orange;
+color: #fff;
+
+}
+.iconeGol{
+position: absolute;
+margin-left: 150px;
+margin-top: 50px;
+height: 500px;
+width: 500px;
+background-size: 500px;
+
+}
+.iconeAzul{
+position: absolute;
+height: 200px;
+width: 200px;
+background-image: 500px;
+
+}
+
+.inputData{
+color:black ;
+font-size: 17px;
+padding: 5px;
+font-family: Arial, Helvetica, sans-serif;
+margin: 5px;
+border: solid #DAA520;
+border-radius: 10px;
+}
